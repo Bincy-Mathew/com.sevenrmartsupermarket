@@ -31,6 +31,16 @@ public class GeneralUtility {
 		Faker faker = new Faker();
 		return faker.name().firstName();
 	}
+	public static String getRandomUsername() {
+		Faker faker = new Faker();
+        return "user_" + faker.name().firstName() + "_" + faker.random().nextInt(1000, 9999);
+    }
+
+    public static String getRandomPassword() {
+    	Faker faker = new Faker();
+        return "pass_" + faker.internet().password();
+    }
+
 
 
 

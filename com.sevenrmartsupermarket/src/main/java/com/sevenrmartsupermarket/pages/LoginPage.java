@@ -48,19 +48,19 @@ public class LoginPage {
 	waitutility.waitElementForClickable(sigInBtn, 20);	
 	sigInBtn.click();
 	}
-	public HomePage login(String userName, String password) {
+	public DashboardPage login(String userName, String password) {
 		enterUserName(userName);
 		enterPassword(password);
 		clickSignInBtn();
-		return new HomePage(driver);//object chaining
+		return new DashboardPage(driver);//object chaining
 		}
-	public HomePage login() {
+	public DashboardPage login() {
 		String userName = properties.getProperty("username");
 		String password = properties.getProperty("password");
 		enterUserName(userName);
 		enterPassword(password);
 		clickSignInBtn();
-		return new HomePage(driver);
+		return new DashboardPage(driver);
 		}
 	}
 

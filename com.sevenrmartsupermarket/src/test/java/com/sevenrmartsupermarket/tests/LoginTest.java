@@ -3,20 +3,21 @@ package com.sevenrmartsupermarket.tests;
 import org.testng.annotations.Test;
 
 import com.sevenrmartsupermarket.base.Base;
-import com.sevenrmartsupermarket.pages.HomePage;
+import com.sevenrmartsupermarket.pages.DashboardPage;
 import com.sevenrmartsupermarket.pages.LoginPage;
 import com.sevenrmartsupermarket.utilities.ExcelReader;
 import com.sevenrmartsupermarket.utilities.GeneralUtility;
 
 public class LoginTest 	extends Base {
 		LoginPage loginpage;
-		HomePage homepage;
+		DashboardPage dashboardpage;
+		
 		ExcelReader excelreader;
 		
 		@Test(groups="regression")
 		public void verifyAdminUserLogin()
 		{
-			homepage = new HomePage(driver);
+			dashboardpage = new DashboardPage(driver);
 			loginpage = new LoginPage(driver);
 			excelreader=new ExcelReader();
 			loginpage.login("admin","admin");
