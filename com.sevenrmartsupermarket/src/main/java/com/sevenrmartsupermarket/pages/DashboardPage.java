@@ -79,7 +79,8 @@ public class DashboardPage {
 		adminUserMoreInfo.click();
 		return new AdminUserPage(driver);
 	}
-	public void clickCategoryMoreInfoText() {
-		
+	public CategoryPage clickCategoryMoreInfoText() {
+		categoryMoreInfo.click();
+		return new CategoryPage(driver);
 }
 	}
