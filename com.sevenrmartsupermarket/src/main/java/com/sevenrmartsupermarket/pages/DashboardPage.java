@@ -30,6 +30,8 @@ public class DashboardPage {
 	private WebElement adminUserMoreInfo;
 	@FindBy(xpath="//p[text()='Category']/../../div/following-sibling::a")
 	private WebElement categoryMoreInfo;
+	@FindBy(xpath="//p[text()='Sub Category']/../../div/following-sibling::a")
+	private WebElement subCategoryMoreInfo;
 	
 	public DashboardPage(WebDriver driver) {
 		this.driver = driver;
@@ -80,7 +82,15 @@ public class DashboardPage {
 		return new AdminUserPage(driver);
 	}
 	public CategoryPage clickCategoryMoreInfoText() {
+		waitutility.waitElementForClickable(categoryMoreInfo, 20);
 		categoryMoreInfo.click();
 		return new CategoryPage(driver);
+		
 }
+	public SubCategoryPage clickSubCategoryMoreInfoText() {
+		waitutility.waitElementForClickable(categoryMoreInfo, 20);
+		subCategoryMoreInfo.click();
+		return new SubCategoryPage(driver);
+
+	}
 	}

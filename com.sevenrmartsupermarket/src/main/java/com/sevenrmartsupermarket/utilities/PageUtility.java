@@ -1,6 +1,9 @@
 package com.sevenrmartsupermarket.utilities;
 
 
+import java.util.List;
+import java.util.Random;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -32,5 +35,12 @@ public class PageUtility {
 	{
 		Select select = new Select(element);
 		select.selectByValue(value);
+	}
+	public void selectRandomOptionFromDropdown(WebElement dropdownElement) {
+		Select dropdown = new Select(dropdownElement);
+		List<WebElement> options = dropdown.getOptions();
+		int randomIndex = new Random().nextInt(options.size());
+		dropdown.selectByIndex(randomIndex);
+		System.out.println("Selected option: " + options.get(randomIndex).getText());
 	}
 }

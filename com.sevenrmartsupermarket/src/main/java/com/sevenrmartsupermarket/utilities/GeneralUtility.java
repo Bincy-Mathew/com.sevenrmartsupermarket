@@ -31,23 +31,24 @@ public class GeneralUtility {
 		Faker faker = new Faker();
 		return faker.name().firstName();
 	}
+
 	public static String getRandomUsername() {
 		Faker faker = new Faker();
-        return "user_" + faker.name().firstName() + "_" + faker.random().nextInt(1000, 9999);
-    }
+		return "user_" + faker.name().firstName() + "_" + faker.random().nextInt(1000, 9999);
+	}
 
-    public static String getRandomPassword() {
-    	Faker faker = new Faker();
-        return "pass_" + faker.internet().password();
-    }
+	public static String getRandomPassword() {
+		Faker faker = new Faker();
+		return "pass_" + faker.internet().password();
+	}
 
-
-
+	
 
 	public static String getRandomAddress() {
 		Faker faker = new Faker();
 		return faker.address().fullAddress();
 	}
+
 	public static String getTimeStamp() {
 		String timeStamp = new SimpleDateFormat("dd_MM_yyyy_hh_mm_ss").format(new Date());
 		return timeStamp;
