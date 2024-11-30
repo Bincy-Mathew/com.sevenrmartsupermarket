@@ -40,7 +40,9 @@ public class PageUtility {
 		Select dropdown = new Select(dropdownElement);
 		List<WebElement> options = dropdown.getOptions();
 		int randomIndex = new Random().nextInt(options.size());
+		WebElement selectedOption =options.get(randomIndex);		
 		dropdown.selectByIndex(randomIndex);
-		System.out.println("Selected option: " + options.get(randomIndex).getText());
+		selectedOption.click();
+		System.out.println("Selected option: " + selectedOption.getText());
 	}
 }

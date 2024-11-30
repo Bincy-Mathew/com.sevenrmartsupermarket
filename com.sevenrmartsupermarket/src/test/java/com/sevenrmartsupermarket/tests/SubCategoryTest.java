@@ -30,5 +30,8 @@ public class SubCategoryTest extends Base{
 		subcategorypage=dashboardpage.clickSubCategoryMoreInfoText();
 		subcategorypage.clickonNewBtn();
 		subcategorypage.clickandSelectfromCategory();
+		subcategorypage.enterSubCategoryField();
+		subcategorypage.chooseFiletoUpload();
+		subcategorypage.tapOnSaveBtn();
 }
 	}
