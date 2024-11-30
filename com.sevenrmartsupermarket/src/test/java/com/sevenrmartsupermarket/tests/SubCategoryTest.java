@@ -24,7 +24,7 @@ public class SubCategoryTest extends Base{
 		Assert.assertEquals(ActualText, ExpectedText);
 	}
 	@Test
-	public void verifyAddSubCategory() {
+	public void verifyAddtheSubCategory() {
 		loginpage=new LoginPage(driver);
 		dashboardpage = loginpage.login("admin", "admin");
 		subcategorypage=dashboardpage.clickSubCategoryMoreInfoText();
