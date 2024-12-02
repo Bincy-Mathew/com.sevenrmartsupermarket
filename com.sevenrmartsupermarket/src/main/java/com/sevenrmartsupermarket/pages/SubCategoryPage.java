@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.sevenrmartsupermarket.constants.Constants;
 import com.sevenrmartsupermarket.utilities.GeneralUtility;
 import com.sevenrmartsupermarket.utilities.PageUtility;
 import com.sevenrmartsupermarket.utilities.WaitUtility;
@@ -63,10 +64,8 @@ public class SubCategoryPage {
 		SubCategoryField.sendKeys(randomName); 
 	}
 
-	public void chooseFiletoUpload() {
-		String path = "C:\\Users\\hp\\Downloads\\Baskets.jpg";
-		File file = new File(path);
-		ChooseFile.sendKeys(file.getAbsolutePath());
+	public void chooseFiletoUpload() {		
+		ChooseFile.sendKeys(Constants.IMAGE_PATH);
 
 	}
 
