@@ -21,17 +21,17 @@ public class SubCategoryPage {
 	GeneralUtility generalutility;
 
 	@FindBy(xpath = "//h1[text()='List Sub Categories']")
-	WebElement ListSubcategoryText;
+	private WebElement ListSubcategoryText;
 	@FindBy(xpath = "//a[@class='btn btn-rounded btn-danger']")
-	WebElement NewBtn;
+	private WebElement NewBtn;
 	@FindBy(xpath = "//select[@id='cat_id']")
-	WebElement Categorydropdown;
+	private WebElement Categorydropdown;
 	@FindBy(xpath = "//input[@id='subcategory']")
-	WebElement SubCategoryField;
+	private WebElement SubCategoryField;
 	@FindBy(xpath = "//input[@id='main_img']")
-	WebElement ChooseFile;
+	private WebElement ChooseFile;
 	@FindBy(xpath = "//button[@class='btn btn-danger']")
-	WebElement SaveBtn;
+	private WebElement SaveBtn;
 
 	public SubCategoryPage(WebDriver driver) {
 		this.driver = driver;

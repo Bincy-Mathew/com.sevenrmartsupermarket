@@ -14,13 +14,13 @@ public class LoginPage {
 	WaitUtility waitutility;
 	Properties properties = new Properties();
 	@FindBy(xpath = "//input[@placeholder = 'Username']")
-	WebElement userNameField;
+	private WebElement userNameField;
 	@FindBy(xpath = "//input[@placeholder = 'Password']")
-	WebElement passwordField;
+	private WebElement passwordField;
 	@FindBy(xpath = "//label[contains(text(),'Remember')]")
-	WebElement rememberMeField;
+	private WebElement rememberMeField;
 	@FindBy(xpath = "//button[contains(text(),'Sign')]")
-	WebElement sigInBtn;
+	private WebElement sigInBtn;
 
 	public LoginPage(WebDriver driver) {
 	this.driver = driver;

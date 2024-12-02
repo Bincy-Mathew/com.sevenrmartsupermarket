@@ -14,11 +14,11 @@ public class CategoryPage {
 	GeneralUtility generalutility = new GeneralUtility();
 
 	@FindBy(xpath = "//h1[text()='List Categories']")
-	WebElement ListCategoryText;
+	private WebElement ListCategoryText;
 	@FindBy(xpath = "//a[@class='btn btn-rounded btn-danger']")
-	WebElement NewButton;
+	private WebElement NewButton;
 	@FindBy(xpath = "//a[text()='Home']")
-	WebElement HomeText;
+	private WebElement HomeText;
 
 	public CategoryPage(WebDriver driver) {
 		this.driver = driver;
