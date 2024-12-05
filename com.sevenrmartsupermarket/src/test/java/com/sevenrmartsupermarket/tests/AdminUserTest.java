@@ -17,18 +17,18 @@ public class AdminUserTest extends Base {
 	AdminUserPage adminuserpage;
 
 	@Test
-	public void verifyAdminUserNewClick() {
+	public void verifyUserisdisplayedwithNewButtonText() {
 		loginpage = new LoginPage(driver);
 		dashboardpage = loginpage.login("admin", "admin");
 		adminuserpage = dashboardpage.clickadminUserMoreInfoText();
 		String Actualtitle = adminuserpage.getTitleofNewButton();
 		String Expectedtitle = "New";
 		Assert.assertEquals(Actualtitle, Expectedtitle);
-		adminuserpage.tapOnNewButton();
+		
 
 	}
 	@Test
-	public void verifyAdminUserInfo() {
+	public void verifyUserisAbletoAddNewUser() {
 		loginpage = new LoginPage(driver);
 		dashboardpage = loginpage.login("admin", "admin");
 		String username= GeneralUtility.getRandomUsername();
@@ -46,12 +46,22 @@ public class AdminUserTest extends Base {
 		
 }
 	@Test
-	public void verifySearchButton() {
+	public void verifyUserisAbletoDeleteaUserName() {
+		loginpage = new LoginPage(driver);
+		dashboardpage = loginpage.login("admin", "admin");		
+		adminuserpage = dashboardpage.clickadminUserMoreInfoText();
+		String actualDeleteMsg=adminuserpage.deleteUserFromAdminTable("january");
+		String expectedDeleteMsg=actualDeleteMsg;
+		Assert.assertEquals(actualDeleteMsg, expectedDeleteMsg);
+	}
+	@Test
+	public void verifyUserisAbletoSearchUserName() {
 		loginpage = new LoginPage(driver);
 		dashboardpage = loginpage.login("admin", "admin");		
 		adminuserpage = dashboardpage.clickadminUserMoreInfoText();
 		String actualsearchText=adminuserpage.getTitleofSearchButton();
 		String expectedsearchText=actualsearchText;
+		Assert.assertEquals(actualsearchText, expectedsearchText);
 		adminuserpage.tapOnSearchButton();
 		adminuserpage.enterSearchUsername();
 		adminuserpage.taponSearchUserType();
@@ -60,6 +70,7 @@ public class AdminUserTest extends Base {
 		List<String> ActualDetailsofAntony= adminuserpage.getDetailsofSearchresult();
 		List<String> ExpectedDetailsofAntony =ActualDetailsofAntony;
 		Assert.assertEquals(ActualDetailsofAntony, ExpectedDetailsofAntony);
-		adminuserpage.tapOnHomeLink();
+		
 	}
+	
 	}

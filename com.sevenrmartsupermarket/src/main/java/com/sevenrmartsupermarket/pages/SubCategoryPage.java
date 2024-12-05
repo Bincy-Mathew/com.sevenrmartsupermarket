@@ -1,7 +1,5 @@
 package com.sevenrmartsupermarket.pages;
 
-import java.io.File;
-
 import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -32,6 +30,8 @@ public class SubCategoryPage {
 	private WebElement ChooseFile;
 	@FindBy(xpath = "//button[@class='btn btn-danger']")
 	private WebElement SaveBtn;
+	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")
+	private WebElement AlertMessage;
 
 	public SubCategoryPage(WebDriver driver) {
 		this.driver = driver;
@@ -78,4 +78,9 @@ public class SubCategoryPage {
 			((JavascriptExecutor) driver).executeScript("arguments[0].click();", SaveBtn);
 		}
 	}
+	public String getAlertmessage() {
+		System.out.println(AlertMessage.getText());
+		return AlertMessage.getText();
+	}
 }
+

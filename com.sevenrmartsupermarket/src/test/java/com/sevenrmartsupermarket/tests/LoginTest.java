@@ -1,5 +1,6 @@
 package com.sevenrmartsupermarket.tests;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.sevenrmartsupermarket.base.Base;
@@ -14,6 +15,15 @@ public class LoginTest 	extends Base {
 		
 		ExcelReader excelreader;
 		
+		
+		@Test(groups = "regression")
+		public void verifytheNameOfWebsite() {
+			loginpage = new LoginPage(driver);
+			String ActualName=loginpage.gettheNameofWebsite();
+			String ExpectedName="7rmart supermarket";
+			Assert.assertEquals(ActualName, ExpectedName);
+		}
+		
 		@Test(groups="regression")
 		public void verifyAdminUserLogin()
 		{
@@ -27,13 +37,12 @@ public class LoginTest 	extends Base {
 			String password = excelreader.getCellData(1, 1);
 			System.out.println(password);
 			System.out.println(GeneralUtility.getRandomAddress());
-			System.out.println(GeneralUtility.getRandomName());
-			
-			
-
-			
-			
-			
+			System.out.println(GeneralUtility.getRandomName());	
+			String actualProfileName = dashboardpage.getProfileName();
+			String expectedProfileName = "Admin";
+			Assert.assertEquals(actualProfileName, expectedProfileName);
+					
+				
 			
 		}
 		

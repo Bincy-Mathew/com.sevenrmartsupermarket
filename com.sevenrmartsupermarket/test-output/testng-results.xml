@@ -2,31 +2,31 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-02T06:09:48 IST" name="Default suite" finished-at="2024-12-02T06:10:07 IST" duration-ms="18628">
+  <suite started-at="2024-12-05T11:11:11 IST" name="Default suite" finished-at="2024-12-05T11:11:37 IST" duration-ms="25837">
     <groups>
     </groups>
-    <test started-at="2024-12-02T06:09:48 IST" name="Default test" finished-at="2024-12-02T06:10:07 IST" duration-ms="18628">
-      <class name="com.sevenrmartsupermarket.tests.AdminUserTest">
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.sevenrmartsupermarket.tests.AdminUserTest@3d34d211]" started-at="2024-12-02T06:09:48 IST" name="launchBrowser" finished-at="2024-12-02T06:09:59 IST" duration-ms="10650" status="PASS">
+    <test started-at="2024-12-05T11:11:11 IST" name="Default test" finished-at="2024-12-05T11:11:37 IST" duration-ms="25837">
+      <class name="com.sevenrmartsupermarket.tests.SubCategoryTest">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.sevenrmartsupermarket.tests.SubCategoryTest@3d34d211]" started-at="2024-12-05T11:11:12 IST" name="launchBrowser" finished-at="2024-12-05T11:11:25 IST" duration-ms="13309" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method signature="verifySearchButton()[pri:0, instance:com.sevenrmartsupermarket.tests.AdminUserTest@3d34d211]" started-at="2024-12-02T06:09:59 IST" name="verifySearchButton" finished-at="2024-12-02T06:10:07 IST" duration-ms="7752" status="PASS">
+        <test-method signature="verifyAddtheSubCategory()[pri:0, instance:com.sevenrmartsupermarket.tests.SubCategoryTest@3d34d211]" started-at="2024-12-05T11:11:25 IST" name="verifyAddtheSubCategory" finished-at="2024-12-05T11:11:37 IST" duration-ms="12407" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifySearchButton -->
-        <test-method is-config="true" signature="terminateSession(org.testng.ITestResult)[pri:0, instance:com.sevenrmartsupermarket.tests.AdminUserTest@3d34d211]" started-at="2024-12-02T06:10:07 IST" name="terminateSession" finished-at="2024-12-02T06:10:07 IST" duration-ms="47" status="PASS">
+        </test-method> <!-- verifyAddtheSubCategory -->
+        <test-method is-config="true" signature="terminateSession(org.testng.ITestResult)[pri:0, instance:com.sevenrmartsupermarket.tests.SubCategoryTest@3d34d211]" started-at="2024-12-05T11:11:37 IST" name="terminateSession" finished-at="2024-12-05T11:11:37 IST" duration-ms="8" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifySearchButton status=SUCCESS method=AdminUserTest.verifySearchButton()[pri:0, instance:com.sevenrmartsupermarket.tests.AdminUserTest@3d34d211] output={null}]]]>
+                <![CDATA[[TestResult name=verifyAddtheSubCategory status=SUCCESS method=SubCategoryTest.verifyAddtheSubCategory()[pri:0, instance:com.sevenrmartsupermarket.tests.SubCategoryTest@3d34d211] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- terminateSession -->
-      </class> <!-- com.sevenrmartsupermarket.tests.AdminUserTest -->
+      </class> <!-- com.sevenrmartsupermarket.tests.SubCategoryTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

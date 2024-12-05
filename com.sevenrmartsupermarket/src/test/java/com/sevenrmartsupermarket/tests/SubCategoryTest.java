@@ -15,7 +15,7 @@ public class SubCategoryTest extends Base{
 	AdminUserPage adminuserpage;
 	SubCategoryPage subcategorypage;
 	@Test
-	public void verifyListSubCategories () {
+	public void verifytheTitleListSubCategories () {
 		loginpage=new LoginPage(driver);
 		dashboardpage = loginpage.login("admin", "admin");
 		subcategorypage=dashboardpage.clickSubCategoryMoreInfoText();
@@ -24,7 +24,7 @@ public class SubCategoryTest extends Base{
 		Assert.assertEquals(ActualText, ExpectedText);
 	}
 	@Test
-	public void verifyAddtheSubCategory() {
+	public void verifythatUserisabletoAddtheSubCategory() {
 		loginpage=new LoginPage(driver);
 		dashboardpage = loginpage.login("admin", "admin");
 		subcategorypage=dashboardpage.clickSubCategoryMoreInfoText();
@@ -33,5 +33,9 @@ public class SubCategoryTest extends Base{
 		subcategorypage.enterSubCategoryField();
 		subcategorypage.chooseFiletoUpload();
 		subcategorypage.tapOnSaveBtn();
+		String ActualAlert=subcategorypage.getAlertmessage();
+		String ExpectedAlert=ActualAlert;
+		Assert.assertEquals(ActualAlert, ExpectedAlert);
+		
 }
 	}

@@ -21,11 +21,17 @@ public class LoginPage {
 	private WebElement rememberMeField;
 	@FindBy(xpath = "//button[contains(text(),'Sign')]")
 	private WebElement sigInBtn;
+	@FindBy(xpath="//b[text()='7rmart supermarket']")
+	private WebElement NameofWebsite;
 
 	public LoginPage(WebDriver driver) {
 	this.driver = driver;
 	waitutility= new WaitUtility(driver);
 	PageFactory.initElements(driver, this);
+	}
+	public String gettheNameofWebsite() {
+		System.out.println(NameofWebsite.getText());;
+		return NameofWebsite.getText();
 	}
 	
 	public void enterUserName(String userName)

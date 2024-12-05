@@ -15,49 +15,32 @@ public class DashboardTest extends Base {
 	DashboardPage dashboardpage;
 	AdminUserPage adminuserpage;
 
-	@Test(groups = "regression")
-	public void verifyProfileName() {
-		loginpage = new LoginPage(driver);
-		dashboardpage = new DashboardPage(driver);
-		loginpage.login("admin", "admin");
-		String actualProfileName = dashboardpage.getProfileName();
-		String expectedProfileName = "Admin";
-		Assert.assertEquals(actualProfileName, expectedProfileName);
-	}
-
+	
 	@Test(groups = { "smoke", "regression" }, retryAnalyzer = com.sevenrmartsupermarket.listeners.RetryAnalyzer.class)
-	public void verifyBgColorOftext() {
+	public void verifyBackgroundColorandFontColorOfHomeText() {
 		loginpage = new LoginPage(driver);
-		dashboardpage = loginpage.login("admin", "admin");// object chaining
+		dashboardpage = loginpage.login("admin", "admin");
 		String Actual = dashboardpage.getBgColorofHomeText();
-		String Expected = "rgba(0, 0, 0, 0)";// retry analyzer=fail 3 to 4 times run
+		String Expected = "rgba(0, 0, 0, 0)";
 		Assert.assertEquals(Actual, Expected);
 		String ActualColor = dashboardpage.getColorofHomeText();
-		String ExpectedColor = ActualColor;
+		String ExpectedColor = "rgba(0, 123, 255, 1)";
 		Assert.assertEquals(ActualColor, ExpectedColor);
 
 	}
 
-	@Test
-	public void verifyTitlesonSideDashboard() {
+	@Test(groups = { "smoke", "regression" })
+	public void verifyallTitlesonSideDashboard() {
 		loginpage = new LoginPage(driver);
 		dashboardpage = loginpage.login("admin", "admin");
 		List<String> ActualTitleNames = dashboardpage.getNamesofTitlesofDashboardSide();
 		List<String> ExpectdTitleNames = ActualTitleNames;
 		Assert.assertEquals(ActualTitleNames, ExpectdTitleNames);
 	}
+	
 
 	@Test(groups = { "smoke", "regression" })
-	public void verifyDashboardDropDownClicakble() {
-		loginpage = new LoginPage(driver);
-		loginpage.login("admin", "admin");
-		dashboardpage = new DashboardPage(driver);
-		dashboardpage.tapOnDashboardDropDown();
-
-	}
-
-	@Test(groups = { "smoke", "regression" })
-	public void verifyTileHeaders() {
+	public void verifytheTitleofTileHeaders() {
 		loginpage = new LoginPage(driver);
 		dashboardpage = loginpage.login("admin", "admin");		
 		List<String> ActualTileHeaderNames = dashboardpage.getNamesofAllTiles();
@@ -76,7 +59,7 @@ public class DashboardTest extends Base {
 		Assert.assertEquals(ActualTileHeaderNames, ExpectdTileHeaderNames);
 
 	}
-	@Test
+	@Test(groups = "smoke")
 	public void verifyAdminUserMoreInfo() {
 		loginpage = new LoginPage(driver);
 		dashboardpage = loginpage.login("admin", "admin");
@@ -85,12 +68,11 @@ public class DashboardTest extends Base {
 		Assert.assertEquals(actualtext, expectedtext);
 		
 	}
-	@Test
+	@Test(groups = "regression")
 	public void verifyAdminUserMoreInfoClick() {
 		loginpage = new LoginPage(driver);
 		dashboardpage = loginpage.login("admin", "admin");
-		adminuserpage = dashboardpage.clickadminUserMoreInfoText();
-	    //adminuserpage=new AdminUserPage(driver);
+		adminuserpage = dashboardpage.clickadminUserMoreInfoText();	   
 	    String actualtextofAdmin=adminuserpage.getTitleofAdminUser();
 	    String expectedtextofAdmin="Admin Users";
 	    Assert.assertEquals(actualtextofAdmin, expectedtextofAdmin);

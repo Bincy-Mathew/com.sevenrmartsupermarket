@@ -45,4 +45,9 @@ public class PageUtility {
 		selectedOption.click();
 		System.out.println("Selected option: " + selectedOption.getText());
 	}
+	public void jsClick(WebElement element) {
+		// TODO Auto-generated method stub
+		JavascriptExecutor js = (JavascriptExecutor) driver; 
+		js.executeScript("arguments[0].click();", element);
+	}
 }

@@ -14,7 +14,7 @@ public class CategoryTest extends Base {
 	CategoryPage categorypage;
 
 	@Test
-	public void verifyListCategory() {
+	public void verifytheTitleofListCategory() {
 		loginpage = new LoginPage(driver);
 		dashboardpage = loginpage.login("admin", "admin");
 		categorypage = dashboardpage.clickCategoryMoreInfoText();
@@ -23,22 +23,22 @@ public class CategoryTest extends Base {
 		Assert.assertEquals(ActualTitle, ExpectedTitle);
 	}
 	@Test
-	public void verifyNewButton() {
+	public void verifythePropertiesOfNewButton() {
 		loginpage = new LoginPage(driver);
 		dashboardpage = loginpage.login("admin", "admin");
 		categorypage = dashboardpage.clickCategoryMoreInfoText();
 		String ActualText=categorypage.getTextofNewBtn();
-		String ExpectedText=ActualText;
+		String ExpectedText="New";
 		Assert.assertEquals(ActualText, ExpectedText);
 		String ActualBg=categorypage.getCssPropertyOfNewBtn("background-color");
-		String ExpectedBg=ActualBg;
+		String ExpectedBg="rgba(220, 53, 69, 1)";
 		Assert.assertEquals(ExpectedBg, ActualBg);
 		String Actualcolor=categorypage.getCssPropertyOfNewBtn("color");
-		String Expectedcolor=Actualcolor;
+		String Expectedcolor="rgba(255, 255, 255, 1)";
 		boolean ActualButtondisplayed=categorypage.isNewbuttonPresent();
 		boolean ExpectedButtondisplayed=ActualButtondisplayed;
 		boolean ActualButtonisenabled=categorypage.isNewButtonEnabled();
 		boolean ExpectedButtondisenabled=ActualButtonisenabled;
-		categorypage.clickOnHomeLink();
+		
 }
 	}
