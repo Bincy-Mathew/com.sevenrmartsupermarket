@@ -50,4 +50,19 @@ public class PageUtility {
 		JavascriptExecutor js = (JavascriptExecutor) driver; 
 		js.executeScript("arguments[0].click();", element);
 	}
+	public boolean isClicked(WebElement element) {
+		try {
+			element.click();
+			return true;
+		} catch (Exception e) {
+			return false;
+		}
+	}
+	public void scrollAndClick(WebElement element) {
+		int index = 0;
+		while (!isClicked(element)) {
+			js.executeScript("window.scrollBy(0," + index + ")");
+			index = index + 2;
+		}
+	}
 }

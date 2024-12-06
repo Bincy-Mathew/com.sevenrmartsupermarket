@@ -2,31 +2,38 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-05T11:11:11 IST" name="Default suite" finished-at="2024-12-05T11:11:37 IST" duration-ms="25837">
+  <suite started-at="2024-12-05T23:46:34 IST" name="Default suite" finished-at="2024-12-05T23:47:08 IST" duration-ms="34017">
     <groups>
     </groups>
-    <test started-at="2024-12-05T11:11:11 IST" name="Default test" finished-at="2024-12-05T11:11:37 IST" duration-ms="25837">
-      <class name="com.sevenrmartsupermarket.tests.SubCategoryTest">
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.sevenrmartsupermarket.tests.SubCategoryTest@3d34d211]" started-at="2024-12-05T11:11:12 IST" name="launchBrowser" finished-at="2024-12-05T11:11:25 IST" duration-ms="13309" status="PASS">
+    <test started-at="2024-12-05T23:46:34 IST" name="Default test" finished-at="2024-12-05T23:47:08 IST" duration-ms="34017">
+      <class name="com.sevenrmartsupermarket.tests.ManageContactTest">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.sevenrmartsupermarket.tests.ManageContactTest@3d34d211]" started-at="2024-12-05T23:46:38 IST" name="launchBrowser" finished-at="2024-12-05T23:46:55 IST" duration-ms="16653" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method signature="verifyAddtheSubCategory()[pri:0, instance:com.sevenrmartsupermarket.tests.SubCategoryTest@3d34d211]" started-at="2024-12-05T11:11:25 IST" name="verifyAddtheSubCategory" finished-at="2024-12-05T11:11:37 IST" duration-ms="12407" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyAddtheSubCategory -->
-        <test-method is-config="true" signature="terminateSession(org.testng.ITestResult)[pri:0, instance:com.sevenrmartsupermarket.tests.SubCategoryTest@3d34d211]" started-at="2024-12-05T11:11:37 IST" name="terminateSession" finished-at="2024-12-05T11:11:37 IST" duration-ms="8" status="PASS">
+        <test-method signature="verifyEditEntriesFromManageContact(java.lang.String)[pri:0, instance:com.sevenrmartsupermarket.tests.ManageContactTest@3d34d211]" started-at="2024-12-05T23:46:55 IST" name="verifyEditEntriesFromManageContact" data-provider="editmanagecontact" finished-at="2024-12-05T23:47:08 IST" duration-ms="13229" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyAddtheSubCategory status=SUCCESS method=SubCategoryTest.verifyAddtheSubCategory()[pri:0, instance:com.sevenrmartsupermarket.tests.SubCategoryTest@3d34d211] output={null}]]]>
+                <![CDATA[Ernakulam]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEditEntriesFromManageContact -->
+        <test-method is-config="true" signature="terminateSession(org.testng.ITestResult)[pri:0, instance:com.sevenrmartsupermarket.tests.ManageContactTest@3d34d211]" started-at="2024-12-05T23:47:08 IST" name="terminateSession" finished-at="2024-12-05T23:47:08 IST" duration-ms="17" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyEditEntriesFromManageContact status=SUCCESS method=ManageContactTest.verifyEditEntriesFromManageContact(java.lang.String)[pri:0, instance:com.sevenrmartsupermarket.tests.ManageContactTest@3d34d211] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- terminateSession -->
-      </class> <!-- com.sevenrmartsupermarket.tests.SubCategoryTest -->
+      </class> <!-- com.sevenrmartsupermarket.tests.ManageContactTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

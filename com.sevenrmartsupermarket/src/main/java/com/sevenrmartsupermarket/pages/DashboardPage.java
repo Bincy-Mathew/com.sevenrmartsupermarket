@@ -32,6 +32,9 @@ public class DashboardPage {
 	private WebElement categoryMoreInfo;
 	@FindBy(xpath="//p[text()='Sub Category']/../../div/following-sibling::a")
 	private WebElement subCategoryMoreInfo;
+	@FindBy(xpath="//p[text()='Manage Contact']/../../div/following-sibling::a")
+	private WebElement ManageContactPageMoreInfo;
+	
 	
 	public DashboardPage(WebDriver driver) {
 		this.driver = driver;
@@ -92,5 +95,10 @@ public class DashboardPage {
 		subCategoryMoreInfo.click();
 		return new SubCategoryPage(driver);
 
+	}
+	public ManageContactPage clickManageContactPageMoreInfo() {
+		waitutility.waitElementForClickable(categoryMoreInfo, 20);
+		ManageContactPageMoreInfo.click();
+		return new ManageContactPage(driver);
 	}
 	}
